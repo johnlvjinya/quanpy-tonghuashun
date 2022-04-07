@@ -1,0 +1,9 @@
+<hevo version="32">
+  {% for i in index_list %}
+  <Block name="{{i.name}}" id="{{i.id}}" IsNameChanged="false" IsSecuritiesChanged="false">
+    {% for j in i.stock_list %}<security market="{{j.market}}" code="{{j.code}}" />
+    {% endfor %}
+  </Block>
+  {% endfor %}
+
+</hevo>
